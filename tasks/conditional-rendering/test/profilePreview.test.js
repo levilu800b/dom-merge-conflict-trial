@@ -46,7 +46,7 @@ describe("profile preview", () => {
     });
   });
 
-  describe.skip("available option", () => {
+  describe('available option', () => {
     let previewInfo = {};
 
     beforeEach(() => {
@@ -54,14 +54,14 @@ describe("profile preview", () => {
         available: true,
         shortForm: false,
         profileInfo: {
-          pictureSrc: "/null",
-          name: "N/A",
-          bio: "N/A",
+          pictureSrc: '/null',
+          name: 'N/A',
+          bio: 'N/A',
         },
       };
     });
 
-    test("only notice is displayed with shortform on, available off", () => {
+    test('only notice is displayed with shortform on, available off', () => {
       previewInfo.available = false;
       previewInfo.shortForm = true;
 
@@ -72,11 +72,11 @@ describe("profile preview", () => {
 
       expect(container.childElementCount).toBe(1);
       expect(container.children[0]).toHaveTextContent(
-        "Profile preview unavailable."
+        'Profile preview unavailable.'
       );
     });
 
-    test("only notice is displayed with shortform off, available off", () => {
+    test('only notice is displayed with shortform off, available off', () => {
       previewInfo.available = false;
       previewInfo.shortForm = false;
 
@@ -87,7 +87,7 @@ describe("profile preview", () => {
 
       expect(container.childElementCount).toBe(1);
       expect(container.children[0]).toHaveTextContent(
-        "Profile preview unavailable."
+        'Profile preview unavailable.'
       );
     });
   });
