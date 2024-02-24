@@ -92,7 +92,7 @@ describe("profile preview", () => {
     });
   });
 
-  describe.skip("short form option", () => {
+  describe("short form option", () => {
     const previewInfo = {
       available: true,
       shortForm: true,

@@ -15,13 +15,16 @@ export function ProfilePreview(previewInfo) {
     name.textContent = previewInfo.profileInfo.name;
     name.dataset.testid = 'profileName';
 
-    const bio = document.createElement('p');
-    bio.textContent = previewInfo.profileInfo.bio;
-    bio.dataset.testid = 'profileBio';
+    if (!previewInfo.shortForm) {
+      // Render bio only if not in short form
+      const bio = document.createElement('p');
+      bio.textContent = previewInfo.profileInfo.bio;
+      bio.dataset.testid = 'profileBio';
+      preview.appendChild(bio);
+    }
 
     preview.appendChild(picture);
     preview.appendChild(name);
-    preview.appendChild(bio);
   }
 
   return preview;
